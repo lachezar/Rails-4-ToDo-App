@@ -7,3 +7,7 @@ So, I decided to use Ubuntu 12.10 and test Ruby Mine IDE (JetBrains) for develop
 
 Then I installed Ruby 2.0.0 using RVM following the instructions on [http://www.ruby-lang.org/en/downloads/](http://www.ruby-lang.org/en/downloads/).
 
+After that I installed Rails 4.0.0.beta1 (latest version) by doing `gem install rails --version 4.0.0.beta1 --no-ri --no-rdoc`.
+
+
+
