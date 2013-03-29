@@ -49,5 +49,5 @@ gem 'haml'
 # gem 'haml-rails'
 
 # html5boilerplate
-gem "rails-boilerplate"
+# gem "rails-boilerplate"
 
