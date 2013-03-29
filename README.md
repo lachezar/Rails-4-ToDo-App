@@ -15,3 +15,5 @@ Do not forget about the [Rails insecure defaults](http://blog.codeclimate.com/bl
 
 Then commit and push.
 
+I had to add the following `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"` on the bottom of my .bashrc (.zshrc) otherwise calling `rails` from a new terminal window did not work.
+
