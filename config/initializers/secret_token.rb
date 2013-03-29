@@ -27,4 +27,4 @@ if ENV["SECRET_TOKEN"].blank?
   end
 end
 
-Todo::Application.config.secret_token = ENV["SECRET_TOKEN"]
+Todo::Application.config.secret_key_base = ENV["SECRET_TOKEN"]
