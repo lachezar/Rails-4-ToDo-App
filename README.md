@@ -9,5 +9,9 @@ Then I installed Ruby 2.0.0 using RVM following the instructions on [http://www.
 
 After that I installed Rails 4.0.0.beta1 (latest version) by doing `gem install rails --version 4.0.0.beta1 --no-ri --no-rdoc`.
 
+Create a folder named `todo`, clone the repo in it, then `rails new <path to the 'todo' folder>`.
 
+Do not forget about the [Rails insecure defaults](http://blog.codeclimate.com/blog/2013/03/27/rails-insecure-defaults/) and fix the `secret_token` with similar solution to [https://github.com/hotsh/rstat.us/blob/master/config/initializers/secret_token.rb](https://github.com/hotsh/rstat.us/blob/master/config/initializers/secret_token.rb).
+
+Then commit and push.
 
