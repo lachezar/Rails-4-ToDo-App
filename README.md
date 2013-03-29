@@ -11,7 +11,7 @@ After that I installed Rails 4.0.0.beta1 (latest version) by doing `gem install 
 
 Create a folder named `todo`, clone the repo in it, then `rails new <path to the 'todo' folder>`.
 
-Do not forget about the [Rails insecure defaults](http://blog.codeclimate.com/blog/2013/03/27/rails-insecure-defaults/) and fix the `secure_token` with similar solution to [https://github.com/hotsh/rstat.us/blob/master/config/initializers/secret_token.rb](https://github.com/hotsh/rstat.us/blob/master/config/initializers/secret_token.rb).
+Do not forget about the [Rails insecure defaults](http://blog.codeclimate.com/blog/2013/03/27/rails-insecure-defaults/) and fix the `secret_token` with similar solution to [https://github.com/hotsh/rstat.us/blob/master/config/initializers/secret_token.rb](https://github.com/hotsh/rstat.us/blob/master/config/initializers/secret_token.rb).
 
 Then commit and push.
 
