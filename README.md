@@ -17,5 +17,5 @@ Then commit and push.
 
 I had to add the following `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"` on the bottom of my .bashrc (.zshrc) otherwise calling `rails` from a new terminal window did not work.
 
-Install [bundler](http://gembundler.com/) and try to make `liquid` and `tilt` operational. 
+Install [bundler](http://gembundler.com/) and try to make `haml` and `tilt` operational. 
 
