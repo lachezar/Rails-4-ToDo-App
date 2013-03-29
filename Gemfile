@@ -26,7 +26,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -35,4 +35,15 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'capistrano', group: :development
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
+
+# template manager
+gem 'tilt'
+
+# liquid template engine
+gem 'liquid'
+
+# haml template language
+gem 'haml'
+gem 'haml-rails'
+
