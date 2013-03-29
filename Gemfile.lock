@@ -81,6 +81,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0.beta1)
       sprockets-rails (~> 2.0.0.rc3)
+    rails-boilerplate (0.1.9)
     railties (4.0.0.beta1)
       actionpack (= 4.0.0.beta1)
       activesupport (= 4.0.0.beta1)
@@ -133,6 +134,7 @@ DEPENDENCIES
   jquery-rails
   liquid
   rails (= 4.0.0.beta1)
+  rails-boilerplate
   sass-rails (~> 4.0.0.beta1)
   sqlite3
   tilt

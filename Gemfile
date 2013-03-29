@@ -45,5 +45,9 @@ gem 'liquid'
 
 # haml template language
 gem 'haml'
-gem 'haml-rails'
+# disable the haml temlate engine for now
+# gem 'haml-rails'
+
+# html5boilerplate
+gem "rails-boilerplate"
 
