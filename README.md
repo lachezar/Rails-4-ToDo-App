@@ -19,6 +19,6 @@ I had to add the following `[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/s
 
 Install [bundler](http://gembundler.com/) <del>and try to make `haml` and `tilt` operational</del>.
 
-Install `rails-boilerplate` for [html5boilerplate](http://html5boilerplate.com/) miracles. 
+Install <del>`rails-boilerplate` for</del> [html5boilerplate](http://html5boilerplate.com/) miracles. 
 
 
