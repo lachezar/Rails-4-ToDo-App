@@ -1,4 +1,8 @@
 Todo::Application.routes.draw do
+  resources :tasks
+
+  resources :tags
+
   get "tasks/add"
   get "tasks/delete"
   get "tasks/update"
