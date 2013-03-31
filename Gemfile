@@ -1,9 +1,18 @@
+ruby '2.0.0'
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 
-gem 'sqlite3'
+# heroku works only with postgres
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -56,4 +65,3 @@ gem "jquery-rails"
 
 # rest in place
 gem "rest_in_place"
-
