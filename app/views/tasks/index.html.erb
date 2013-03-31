@@ -1,25 +1,27 @@
-<h1 class="todo">to do</h1>
+<div class="task-list">
+  <h1 class="todo">todo</h1>
 
-<table class="todo">
-  <tbody>
-    <% @tasks.each do |task| %>
-    <%= render :partial => 'task_entry', :locals => {:task => task} %>
-    <% end %>
-  </tbody>
-</table>
-<div class="new-todo">
-  <%= form_for(@task, :remote => true) do |f| %>
-    <%= f.text_field :title %>
-    <%= f.submit %>
-  <% end %>
-</div>
-
-<h1 class="done">done</h1>
-
-<table class="done">
-  <tbody>
-  <% @tasks_done.each do |task| %>
+  <table class="todo">
+    <tbody>
+      <% @tasks.each do |task| %>
       <%= render :partial => 'task_entry', :locals => {:task => task} %>
-  <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="new-todo">
+    <%= form_for(@task, :remote => true) do |f| %>
+      <%= f.text_field :title %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+  <h1 class="done">done</h1>
+
+  <table class="done">
+    <tbody>
+    <% @tasks_done.each do |task| %>
+        <%= render :partial => 'task_entry', :locals => {:task => task} %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
