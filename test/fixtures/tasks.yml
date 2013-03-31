@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  completed: false
+  gif: MyString
+  deleted: false
+
+two:
+  title: MyString
+  completed: false
+  gif: MyString
+  deleted: false
