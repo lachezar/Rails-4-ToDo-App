@@ -21,4 +21,7 @@ Install [bundler](http://gembundler.com/) <del>and try to make `haml` and `tilt`
 
 Install <del>`rails-boilerplate` for</del> [html5boilerplate](http://html5boilerplate.com/) miracles. 
 
+Add `jquery-rails` gem to the Gemfile to add cheap support for CSRF tokens and better jQuery integration.
+
+Add `rest-in-place` gem to allow in-place editing of fields.
 
