@@ -10,7 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require jquery_ujs
 //= require modernizr-2.6.2.min
+//= require rest_in_place
 //= require plugins
 //= require turbolinks
 //= require_tree .

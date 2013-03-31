@@ -6,14 +6,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
-  <meta name="description" content="">
+  <title>Rails 4 ToDo app</title>
+  <meta name="description" content="Rails 4 ToDo app">
   <meta name="viewport" content="width=device-width">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <%= stylesheet_link_tag "application", {media: "all", "data-turbolinks-track" => true} %>
-  <%= javascript_include_tag "application", {"data-turbolinks-track" => true} %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -31,6 +31,7 @@
 <script src="http://code.jquery.com/jquery-2.0.0b2.min.js"></script>
 <!--<![endif]-->
 <%= javascript_include_tag 'plugins' %>
+<%= javascript_include_tag "application", {"data-turbolinks-track" => true} %>
 <%# javascript_include_tag 'main' %>
 
 <% if Rails.env.production? %>

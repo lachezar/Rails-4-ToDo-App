@@ -1,12 +1,10 @@
 Todo::Application.routes.draw do
-  resources :tasks
 
+  root :to => 'tasks#index'
+
+  resources :tasks
   resources :tags
 
-  get "tasks/add"
-  get "tasks/delete"
-  get "tasks/update"
-  get "tasks/list"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

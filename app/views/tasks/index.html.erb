@@ -1,33 +1,25 @@
-<h1>Listing tasks</h1>
+<h1 class="todo">to do</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Completed</th>
-      <th>Gif</th>
-      <th>Deleted</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
+<table class="todo">
   <tbody>
     <% @tasks.each do |task| %>
-    <tr>
-      <td><%= task.title %></td>
-      <td><%= task.completed %></td>
-      <td><%= task.gif %></td>
-      <td><%= task.deleted %></td>
-      <td><%= link_to 'Show', task %></td>
-      <td><%= link_to 'Edit', edit_task_path(task) %></td>
-      <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    <%= render :partial => 'task_entry', :locals => {:task => task} %>
     <% end %>
   </tbody>
 </table>
+<div class="new-todo">
+  <%= form_for(@task, :remote => true) do |f| %>
+    <%= f.text_field :title %>
+    <%= f.submit %>
+  <% end %>
+</div>
 
-<br />
+<h1 class="done">done</h1>
 
-<%= link_to 'New Task', new_task_path %>
+<table class="done">
+  <tbody>
+  <% @tasks_done.each do |task| %>
+      <%= render :partial => 'task_entry', :locals => {:task => task} %>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,7 @@
+<tr>
+  <td><%= check_box_tag task.id, task.completed, task.completed %></td>
+  <td class="title rest-in-place" data-url="/tasks/<%= task.id %>/" data-object="task" data-attribute="title">
+    <%= task.title %>
+  </td>
+  <td><%= link_to 'Archive', task, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete-link' %></td>
+</tr>

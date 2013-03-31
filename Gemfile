@@ -51,3 +51,9 @@ gem 'haml'
 # html5boilerplate
 # gem "rails-boilerplate"
 
+# better jQuery support
+gem "jquery-rails"
+
+# rest in place
+gem "rest_in_place"
+

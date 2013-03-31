@@ -1,3 +1,39 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {
+  margin: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h1.done {
+  color:  limegreen;
+}
+
+h1.todo {
+  color: darkred;
+}
+
+table.done, table.todo {
+
+  td {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  td.title {
+    min-width: 200px;
+
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 0.1em lightgray, 0 0 0.1em lightgray, 0 0 0.1em lightgray;
+  }
+
+}
+
+.new-todo {
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
