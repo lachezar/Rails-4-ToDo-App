@@ -30,17 +30,8 @@
 <!--[if gte IE 9]><!-->
 <script src="http://code.jquery.com/jquery-2.0.0b2.min.js"></script>
 <!--<![endif]-->
-<%= javascript_include_tag "application", {"data-turbolinks-track" => true} %>
-<%# javascript_include_tag 'main' %>
 
-<% if Rails.env.production? %>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-<% end %>
+<%= javascript_include_tag "application", {"data-turbolinks-track" => true} %>
+
 </body>
 </html>
