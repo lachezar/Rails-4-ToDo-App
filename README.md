@@ -31,8 +31,11 @@ Start following the simple tutorial for rails deployment on heroku and by the ti
 
 Then follow the instructions how to [prebuild your static assets](https://devcenter.heroku.com/articles/rails-asset-pipeline).
 
+You must prebuild your assets with the same SECRET_KEY value as on heroku. Something like this should do the trick: `SECRET_TOKEN=<secret token> RAILS_ENV=production bundle exec rake assets:precompile`
+
 After the static assets are done, create a file `public/assets/manifest.yml`, because Rails 4 will not create it for you, but heroku is using it as indicator whether to prebuild your assets or not. Heroku's deployment will fail if it tries prebuilding the assets :-/
 
+Last step should be database initialization: `heroku run rake db:migrate`
 
 
 Check out the app here: [http://todo-rails4.herokuapp.com/](http://todo-rails4.herokuapp.com/)
