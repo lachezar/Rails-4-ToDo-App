@@ -13,3 +13,14 @@
  *= require_self
  *= require_tree .
  */
+
+.main {
+    margin: 20px;
+}
+
+footer {
+    margin: 20px;
+    margin-top: 40px;
+    font-style:italic;
+    color: darkgray;
+}

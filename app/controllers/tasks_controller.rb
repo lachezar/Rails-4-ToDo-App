@@ -1,11 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:update, :destroy, :motivate]
 
-  # http://en.wikipedia.org/wiki/Most_common_words_in_English
-  # list of most common words in English longer than 3 letters
-  @@common_words = %w{play watch do visit drink check that have with this from they will would there their what about which when make like time just know take people into year your good some could them other than then look only come over think also back after work first well even want because these give most us}
-  @@whitelisted_words = %w{cat dog}
-
   # GET /tasks
   # GET /tasks.json
   def index
@@ -22,8 +17,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save
 
-        tags = @task.title.split.map(&:downcase).select { |w| @@whitelisted_words.include? w or (w.length > 3 and @@common_words.exclude? w) }
-        @task.tags = tags.map { |t| Tag.new(:name => t) }
+        @task.generate_tags!
         @task.save
 
         format.html { render :partial => 'task_entry', :locals => {:task => @task} }
@@ -40,6 +34,12 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
+
+        # generate tags again
+        @task.tags.delete_all
+        @task.generate_tags!
+        @task.save
+
         format.html { head :no_content }
         format.json { render json: @task }
       else

@@ -6,6 +6,10 @@ addMotivateLink = (selector) ->
   $(selector).append "<td><a href='javascript:;' class='motivate'>Motivate me!</a></td>"
 
 $(document).ready(
+
+  addMotivateLink "tr"
+
+  # mark task as completed or not
   $("tbody").on "change", "input[type=checkbox]", (event) ->
     name = event.target.name
     checked = event.target.checked
@@ -16,7 +20,7 @@ $(document).ready(
         $("table.#{klass} tbody").append $(event.target).closest("tr").remove()
         $(event.target).closest('tr').find('.title').restInPlace()
 
-
+  # new task added
   $("#new_task").on "ajax:success",
     (event, data) ->
       $("table.todo tbody").append(data).find('.title:last').restInPlace()
@@ -28,8 +32,7 @@ $(document).ready(
     (event, data) ->
       $(event.target).closest("tr").remove()
 
-  addMotivateLink "tr"
-
+  # motivate link
   $("tbody").on "click", ".motivate", (event) ->
     $.get "/tasks/#{$(event.target).closest('tr').find('input[type=checkbox]').attr('name')}/motivate",
       (data, textStatus, jqXHR) ->
@@ -43,5 +46,9 @@ $(document).ready(
         img.id = "motivation"
         $("#motivation").remove()
         $(".task-list").after img
+
+  # on updated title value
+  $("tbody").on "success.rest-in-place", ".title", (event) ->
+    $(event.target).closest("tr").find(".motivate").click()
 
 )
