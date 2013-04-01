@@ -7,7 +7,7 @@ gem 'rails', '4.0.0.beta1'
 
 # heroku works only with postgres
 group :production, :staging do
-  gem "pg"
+  gem 'pg'
 end
 
 group :development, :test do
@@ -61,7 +61,7 @@ gem 'haml'
 # gem "rails-boilerplate"
 
 # better jQuery support
-gem "jquery-rails"
+gem 'jquery-rails'
 
 # rest in place
-gem "rest_in_place"
+gem 'rest_in_place'
