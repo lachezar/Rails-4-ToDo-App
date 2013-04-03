@@ -17,7 +17,7 @@ if ENV["SECRET_TOKEN"].blank?
     raise "You must set ENV[\"SECRET_TOKEN\"] in your app's config vars"
   elsif Rails.env.test?
     # Generate the key and test away
-    ENV["SECRET_TOKEN"] = Todo::Application.config.secret_token = SecureRandom.hex(30)
+    ENV["SECRET_TOKEN"] = Todo::Application.config.secret_key_base = SecureRandom.hex(30)
   else
     config_file = File.expand_path(File.join(Rails.root, '/config/config.yml'))
     config = YAML.load_file(config_file)
