@@ -70,7 +70,7 @@ class TasksController < ApplicationController
 
     query = tag.nil? ? '' : tag.name
 
-    content = open(url + query, "UserAgent" => "Ruby-Wget").read
+    content = open(url + URI::encode(query), "UserAgent" => "Ruby-Wget").read
     result = JSON.parse(content)
 
     gif = result['data']
