@@ -78,7 +78,7 @@ class TasksController < ApplicationController
     # people at giphy decided to make my life hard by removing the random gif
     # when a search query returns no results :(
     # ... may be they will change it back
-    if gif.empty?
+    if gif.nil? or gif.empty?
       random_gif_url = 'http://api.giphy.com/v1/gifs/screensaver?api_key=dc6zaTOxFJmzC'
       content = open(random_gif_url, "UserAgent" => "Ruby-Wget").read
       result = JSON.parse(content)
