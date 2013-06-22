@@ -44,13 +44,13 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano', group: :development
 
 # To use debugger
-gem 'debugger'
+#gem 'debugger'
 
 # template manager
 gem 'tilt'
 
 # liquid template engine
-gem 'liquid'
+#gem 'liquid'
 
 # haml template language
 gem 'haml'
