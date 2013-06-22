@@ -1,8 +1,11 @@
 Rails-4-ToDo-App
 ================
 
-[Giphy's API is currenlty unavailable :-/](http://techcrunch.com/2013/05/22/giphy-gif-search-engine-rolls-out-private-artist-profiles-to-help-organize-monetize-the-gif-community/)
-----------------------------------------
+Everything is back to normal. Giphy is having new API. Gratz.
+
+
+<del>[Giphy's API is currenlty unavailable :-/](http://techcrunch.com/2013/05/22/giphy-gif-search-engine-rolls-out-private-artist-profiles-to-help-organize-monetize-the-gif-community/)</del>
+
 
 Just trying out Rails 4 + jQuery 2 + Giphy API
 
