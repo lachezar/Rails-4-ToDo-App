@@ -37,7 +37,7 @@ $(document).ready(
     $.get "/tasks/#{$(event.target).closest('tr').find('input[type=checkbox]').attr('name')}/motivate",
       (data, textStatus, jqXHR) ->
         gif = data
-        url = gif.image_fixed_height_url
+        url = gif.images.fixed_height.url
 
         img = new Image
         img.src = url

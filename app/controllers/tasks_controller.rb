@@ -64,7 +64,7 @@ class TasksController < ApplicationController
     require 'open-uri'
     require 'json'
 
-    url = 'http://giphy.com/api/gifs?tag='
+    url = 'http://api.giphy.com/v1/gifs/translate?api_key=dc6zaTOxFJmzC&limit=1&s='
 
     tag = @task.tags.sample
 
@@ -73,7 +73,24 @@ class TasksController < ApplicationController
     content = open(url + query, "UserAgent" => "Ruby-Wget").read
     result = JSON.parse(content)
 
-    gif = result['data'].sample
+    gif = result['data']
+
+    # people at giphy decided to make my life hard by removing the random gif
+    # when a search query returns no results :(
+    # ... may be they will change it back
+    if gif.empty?
+      random_gif_url = 'http://api.giphy.com/v1/gifs/screensaver?api_key=dc6zaTOxFJmzC'
+      content = open(random_gif_url, "UserAgent" => "Ruby-Wget").read
+      result = JSON.parse(content)
+      height_200_url = result['data']['image_original_url'].sub 'original.gif', '200.gif'
+      gif = {
+              :images => {
+                :fixed_height => {
+                  :url => height_200_url
+                }
+              }
+            }
+    end
 
     respond_to do |format|
       #format.html { render json: gif }
