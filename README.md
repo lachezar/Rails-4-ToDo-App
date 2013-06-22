@@ -1,6 +1,9 @@
 Rails-4-ToDo-App
 ================
 
+[Giphy's API is currenlty unavailable :-/](http://techcrunch.com/2013/05/22/giphy-gif-search-engine-rolls-out-private-artist-profiles-to-help-organize-monetize-the-gif-community/)
+----------------------------------------
+
 Just trying out Rails 4 + jQuery 2 + Giphy API
 
 So, I decided to use Ubuntu 12.10 and test Ruby Mine IDE (JetBrains) for development. I had to install Oracle's JDK from [http://www.devsniper.com/ubuntu-12-04-install-sun-jdk-6-7/](http://www.devsniper.com/ubuntu-12-04-install-sun-jdk-6-7/).
